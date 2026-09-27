@@ -1,0 +1,4 @@
+/* Student and supervisor dashboard styles live here. */
+.app-shell .content { animation: rise .35s ease both; }
+.app-shell .table-card { overflow-x: auto; }
+.app-shell .stats { width: 100%; }

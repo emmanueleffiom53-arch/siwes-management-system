@@ -1,0 +1,58 @@
+.header-avatar { width: 34px; height: 34px; flex: 0 0 34px; border-radius: 50%; object-fit: cover; border: 2px solid #e2e9df; }
+.profile-avatar-wrap { display: grid; justify-items: center; gap: 10px; }
+.profile-photo { object-fit: cover; }
+.avatar-upload { position: relative; overflow: hidden; padding: 8px 10px; font-size: 10px; white-space: nowrap; }
+.avatar-upload input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.avatar-upload input:disabled { cursor: wait; }
+.file-hint { color: var(--muted); font-size: 11px; line-height: 1.5; }
+.activity-image-preview { display: block; width: min(100%, 420px); max-height: 300px; object-fit: contain; object-position: left center; background: #f2f5f1; border: 1px solid var(--line); }
+.activity-attachment { display: flex; width: fit-content; align-items: center; gap: 9px; margin-top: 10px; color: var(--green); font-size: 10px; font-weight: 700; text-decoration: none; }
+.activity-attachment img { width: 52px; height: 42px; object-fit: cover; border: 1px solid var(--line); }
+.empty-state { margin: 0; padding: 25px; color: var(--muted); font-size: 13px; text-align: center; }
+.roster-count { color: var(--muted); font-size: 11px; }
+.student-roster { background: #fff; border: 1px solid var(--line); }
+.student-roster-row { display: grid; grid-template-columns: 42px minmax(160px, 1fr) minmax(160px, 1fr); gap: 13px; align-items: center; min-height: 70px; padding: 12px 18px; border-bottom: 1px solid #edf0ec; }
+.student-roster-row:last-child { border-bottom: 0; }
+.student-roster-row > img, .roster-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.roster-avatar { display: grid; place-items: center; background: #e5ece2; color: var(--deep); font-size: 13px; }
+.student-roster-row strong, .student-roster-row small { display: block; }
+.student-roster-row strong { color: var(--deep); font-size: 12px; }
+.student-roster-row small { margin-top: 4px; color: var(--muted); font-size: 10px; }
+.roster-activity-heading { margin-top: 38px; }
+.review-detail { display: grid; gap: 20px; padding: 28px; background: #fff; border: 1px solid var(--line); }
+.review-detail dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0; }
+.review-detail dt { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.review-detail dd { margin: 6px 0 0; color: var(--deep); font-size: 13px; }
+.review-detail h3 { margin: 0; color: var(--deep); font: 400 20px Georgia, serif; }
+.review-description { margin: -12px 0 0; color: #53645a; font-size: 13px; line-height: 1.7; white-space: pre-wrap; }
+.review-student { display: flex; align-items: center; gap: 12px; }
+.review-student p { margin: 0 0 5px; color: var(--muted); font: 12px sans-serif; }
+.review-student h2 { margin: 0; }
+.review-student-avatar { width: 44px; height: 44px; flex: 0 0 44px; display: grid; place-items: center; border-radius: 50%; object-fit: cover; background: #e5ece2; color: var(--deep); font-size: 15px; }
+.activity-image-link { display: grid; justify-items: start; gap: 7px; width: fit-content; color: var(--green); font-size: 11px; text-decoration: none; }
+.review-activity-image { display: block; max-width: 100%; max-height: 480px; object-fit: contain; background: #f2f5f1; border: 1px solid var(--line); }
+.review-comment { display: grid; gap: 8px; color: #637269; font-size: 11px; }
+.review-comment textarea { min-height: 100px; padding: 12px; resize: vertical; border: 1px solid var(--line); color: var(--deep); font: inherit; }
+.review-history { display: grid; gap: 12px; padding-top: 4px; }
+.review-history article { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 8px 12px; padding: 12px; background: #f6f8f5; }
+.review-history time { color: var(--muted); font-size: 10px; }
+.review-history p { grid-column: 1 / -1; margin: 0; color: #53645a; font-size: 12px; line-height: 1.5; }
+.form-actions button:disabled { cursor: wait; opacity: .65; }
+.alphabet-picker { position: relative; display: grid; gap: 7px; }
+.profile-picker-field { display: grid; gap: 8px; }
+.alphabet-picker > label { color: #65736b; font-size: 11px; }
+.alphabet-picker > input { width: 100%; padding: 12px; border: 1px solid var(--line); outline: 0; color: var(--deep); background: #fff; }
+.alphabet-picker > input:focus { border-color: var(--green); }
+.alphabet-picker-menu { position: absolute; z-index: 5; top: calc(100% + 3px); left: 0; right: 0; display: grid; gap: 8px; padding: 10px; border: 1px solid var(--line); background: #fff; box-shadow: 0 12px 28px #304b3618; }
+.alphabet-options { display: grid; max-height: 190px; overflow-y: auto; }
+.alphabet-options button { padding: 9px 8px; border: 0; background: transparent; color: var(--ink); text-align: left; font-size: 11px; cursor: pointer; }
+.alphabet-options button:hover, .alphabet-options button[aria-selected="true"] { background: #eef4ec; color: var(--deep); }
+.alphabet-options .file-hint { padding: 8px; }
+@media (max-width: 560px) {
+  .review-detail { padding: 18px; }
+  .review-detail dl { grid-template-columns: 1fr; }
+  .review-detail .form-actions { flex-wrap: wrap; }
+  .review-detail .form-actions .button-dark { flex: 1 0 100%; justify-content: space-between; }
+  .student-roster-row { grid-template-columns: 40px minmax(0, 1fr); }
+  .roster-study { grid-column: 2; }
+}

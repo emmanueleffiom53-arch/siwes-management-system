@@ -1,0 +1,6 @@
+/* Authentication page styles live here. Shared tokens remain in the app theme. */
+.auth-page { isolation: isolate; }
+.auth-card { position: relative; z-index: 1; }
+.auth-card form { max-width: 100%; }
+.auth-feedback { color: #ad5f5f; font-size: 12px; line-height: 1.5; margin: 0; }
+.auth-feedback.success { color: #537e5b; }
