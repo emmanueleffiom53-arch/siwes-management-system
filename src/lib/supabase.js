@@ -6,6 +6,9 @@ const supabaseUrl =
 const supabaseKey =
     "sb_publishable_e7B3guEPAWQDmKtVRvnOaw_DhtBlnIK";
 
+export const isSupabaseConfigured =
+    Boolean(supabaseUrl) && Boolean(supabaseKey);
+
 export const supabase = createClient(
     supabaseUrl,
     supabaseKey
